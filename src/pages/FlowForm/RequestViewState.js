@@ -12,12 +12,15 @@ const RequestViewState = ({ enumName }) => {
         <Tag color={status.color}>
           <>
             <Badge status="processing" />
-            {status.title}
+            初始化
           </>
         </Tag>
       );
     }
-    return <Tag color={status.color}>{status.title}</Tag>;
+    if(enumName === 'INPROCESS'){
+      return <Tag color={'yellow'}>{'执行中'}</Tag>;
+    }
+    return <Tag color={'green'}>{'审批完成'}</Tag>;
   }
   return null;
 };

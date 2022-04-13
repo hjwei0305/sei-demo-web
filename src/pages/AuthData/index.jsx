@@ -130,7 +130,7 @@ class AuthData extends Component {
               key="del"
               placement="topLeft"
               title="确定要删除吗？"
-              authCode="SEI-DEMO-TEST-SC"
+              authCode="PXYS-PXYS-SC"
               onConfirm={() => this.handleEvent('del', record)}
             >
               {this.renderDelBtn(record)}

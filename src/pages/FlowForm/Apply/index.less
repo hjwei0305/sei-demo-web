@@ -1,0 +1,98 @@
+.order-box {
+  position: relative;
+  min-width: 1100px;
+  max-width: 1100px;
+  height: auto !important;
+  margin: 0 auto;
+  overflow: hidden;
+  :global {
+    .order-content-box {
+      background-color: @page-background-color;
+      .ant-table-empty .ant-table-body {
+        overflow: hidden !important;
+      }
+      .ant-tabs {
+        background-color: @white;
+        .ant-tabs-bar {
+          margin: 0;
+        }
+      }
+      .tabsbox {
+        //height: calc(100vh - 310px);
+        background: #fff;
+      }
+      .tabsTable {
+        height: calc(100vh - 410px);
+      }
+      .ant-tabs-extra-content {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        padding: 0 24px 0 8px;
+        .ant-statistic {
+          margin-left: 8px;
+          margin-right: 16px;
+          line-height: 12px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &.actived {
+            .ant-statistic-content-value-int {
+              color: @primary-color;
+            }
+            .ant-statistic-content-value-decimal {
+              color: fade(@primary-color, 85%);
+            }
+            .suid-money {
+              .ant-statistic-content-value-int,
+              .ant-statistic-content-value-decimal {
+                color: fade(@black, 65%);
+              }
+            }
+          }
+
+          &.gray-money {
+            .ant-statistic-content-value-int,
+            .ant-statistic-content-value-decimal {
+              color: #f5222d;
+            }
+          }
+        }
+        .ant-statistic-content-prefix {
+          font-size: 12px;
+        }
+        .ant-statistic-title {
+          font-size: 12px;
+        }
+        .ant-statistic-content-value-int {
+          font-size: 14px;
+        }
+        .ant-statistic-content-value-decimal,
+        .ant-statistic-content-suffix {
+          font-size: 12px;
+        }
+        .suid-money {
+          .ant-statistic-title {
+            font-size: 10px;
+          }
+          .ant-statistic-content-value {
+            color: #1890ff;
+          }
+          .ant-statistic-content-value-int {
+            font-size: 16px;
+          }
+          .ant-statistic-content-value-decimal,
+          .ant-statistic-content-suffix {
+            font-size: 14px;
+          }
+        }
+      }
+      .item-sum-box {
+        .ant-statistic-content-suffix {
+          font-size: 12px;
+          color: fade(@black, 45%);
+        }
+      }
+    }
+  }
+}

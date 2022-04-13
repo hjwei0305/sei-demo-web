@@ -20,6 +20,11 @@ const menuData = [
         name: '培训演示数据',
         path: '/authData/index',
       },
+      {
+        id: '101',
+        name: '流程表单',
+        path: '/flowForm/index',
+      },
     ],
   },
   {

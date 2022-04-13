@@ -172,22 +172,22 @@ class AuthData extends Component {
       bordered: false,
       toolBar: toolBarProps,
       remotePaging: true,
-      cascadeParams: {
-        filters: [
-          {
-            fieldName: 'corporationCode',
-            value: '',
-            operator: 'EQ',
-            fieldType: 'String',
-          },
-          {
-            fieldName: 'status',
-            value: 1,
-            operator: 'EQ',
-            fieldType: 'java.lang.Integer',
-          },
-        ],
-      },
+      // cascadeParams: {
+      //   filters: [
+      //     {
+      //       fieldName: 'corporationCode',
+      //       value: '',
+      //       operator: 'EQ',
+      //       fieldType: 'String',
+      //     },
+      //     {
+      //       fieldName: 'status',
+      //       value: 1,
+      //       operator: 'EQ',
+      //       fieldType: 'java.lang.Integer',
+      //     },
+      //   ],
+      // },
       searchProperties: ['code', 'name'],
       store: {
         type: 'POST',

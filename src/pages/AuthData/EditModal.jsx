@@ -48,7 +48,6 @@ class FormModal extends PureComponent {
       store: {
         url: `${SERVER_PATH}/sei-basic/corporation/getUserAuthorizedEntities`,
       },
-      afterSelect: (value) => this.handleSelect(value),
       reader: {
         name: 'name',
         description: 'code',

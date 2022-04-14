@@ -2,8 +2,6 @@ import React from 'react';
 import { Tag, Badge } from 'antd';
 import { constants } from '@/utils';
 
-const { TRACK_VIEW_STATUS } = constants;
-
 const RequestViewState = ({ enumName }) => {
   const status = 'INIT';
   if (status) {

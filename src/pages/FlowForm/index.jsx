@@ -40,6 +40,7 @@ class FlowForm extends Component {
           payload: {
             modalVisible: true,
             action: 'add',
+            edit: null
           },
         });
         break;
@@ -173,7 +174,7 @@ class FlowForm extends Component {
       {
         title: '审核历史',
         key: 'flowHistory',
-        canClick: item.flowStatus !== 'INIT',
+        canClick: item.flowStatus === 'COMPLETED' || item.flowStatus === 'INPROCESS' ,
         props: {
           businessId: item.id,
           store: {
@@ -184,7 +185,7 @@ class FlowForm extends Component {
       {
         title: '提交审批',
         key: 'flow',
-        canClick: item.flowStatus === 'INIT',
+        canClick: item.flowStatus !== 'COMPLETED' && item.flowStatus !== 'INPROCESS' ,
         props: {
           businessKey: item.id,
           startComplete: () => useThis.reloadData(),

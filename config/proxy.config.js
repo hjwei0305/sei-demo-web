@@ -5,16 +5,17 @@ export default {
     secure: false,
     pathRewrite: { '^/mocker.api': '' },
   },
-  // '/api-gateway/sei-demo': {
-  //   target: 'http://127.0.0.1:8080',
-  //   changeOrigin: true,
-  //   secure: false,
-  //   pathRewrite: { '^/api-gateway/sei-demo': '' },
-  // },
   '/api-gateway': {
     target: 'http://10.233.0.170/api-gateway/',
     changeOrigin: true,
     secure: false,
     pathRewrite: { '^/api-gateway': '' },
   },
+  // '/api-gateway/sei-demo': {
+  //   target: 'http://127.0.0.1:8080',
+  //   changeOrigin: true,
+  //   secure: false,
+  //   pathRewrite: { '^/api-gateway/sei-demo': '' },
+  // },
+
 };

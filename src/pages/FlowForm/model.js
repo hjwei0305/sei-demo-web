@@ -61,6 +61,7 @@ export default modelExtend(model, {
           type: 'updateState',
           payload: {
             editData: result.data,
+            modalVisible: true
           },
         });
       } else {

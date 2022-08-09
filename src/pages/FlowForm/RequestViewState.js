@@ -5,7 +5,11 @@ import { constants } from '@/utils';
 const RequestViewState = ({ enumName }) => {
   const status = 'INIT';
   if (status) {
-    if (enumName === 'INIT') {
+    if (enumName === 'INPROCESS') {
+      return <Tag color={'yellow'}>{'执行中'}</Tag>;
+    } else if (enumName === 'COMPLETED') {
+      return <Tag color={'green'}>{'审批完成'}</Tag>;
+    } else {
       return (
         <Tag color={status.color}>
           <>
@@ -15,10 +19,6 @@ const RequestViewState = ({ enumName }) => {
         </Tag>
       );
     }
-    if(enumName === 'INPROCESS'){
-      return <Tag color={'yellow'}>{'执行中'}</Tag>;
-    }
-    return <Tag color={'green'}>{'审批完成'}</Tag>;
   }
   return null;
 };
